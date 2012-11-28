@@ -1,15 +1,6 @@
 # combat
 
-A website written in noir. 
-
-## Usage
-
-If you use cake, substitute 'lein' with 'cake' below. Everything should work fine.
-
-```bash
-lein deps
-lein run
-```
+Webapp to record Brazilian Jiu Jitsu moves and transitions. Built-in graph browser. Uses neo4j.
 
 ## License
 

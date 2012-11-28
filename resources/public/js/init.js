@@ -2,7 +2,7 @@ var canvas = document.getElementById("neoviz");
 
 var myGraph; // a reference to the graph to make it available to the outside world
 
-var p = Processing(canvas); 
+var p = Processing(canvas);
 
 function loadvisualization() {
   var vizid = document.getElementById("vizid").value 
@@ -41,7 +41,8 @@ $(function() {
     } else {
       p.resourceId = "0";
     }*/
-    p.resourceId = "54";
+    p.resourceId = cljs.main.initial_node;
+//    p.resourceId = "73";
 
     p.init(p.ajax("/js/pjs/physics.pjs")+p.ajax("/js/pjs/donut.pjs")+p.ajax("/js/pjs/resource.pjs")+p.ajax("/js/pjs/node.pjs")+p.ajax("/js/pjs/edge.pjs")+p.ajax("/js/pjs/graph.pjs")+p.ajax("/js/pjs/network.pjs"));
     initialized = true;

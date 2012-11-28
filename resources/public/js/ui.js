@@ -27,7 +27,6 @@ Attributes = {
   expanded: false,
   adjustHeight: function() {
     $('#attributes').height($('#sidebar').height()-$('#topic').height());
-//    console.log("adjusted height");
   },
   init: function(donut) {
     $('ul.attributes').empty();
@@ -40,7 +39,7 @@ Attributes = {
 
     Attributes.contract();
 
-    $('ul.attributes li').find('a').mouseover(function() {      
+    $('ul.attributes li').find('a').mouseover(function() {
       // triggers an Attributes#select
       myGraph.selectedNode.subject.setSelectedAttribute($(this).attr('attrid'));
       $('ul.attributes li').removeClass('current');
@@ -54,7 +53,7 @@ Attributes = {
 
     $('h3#selected-attribute').click(function() { Attributes.toggle(); });
   },
-  select: function(segment) { 
+  select: function(segment) {
     // donut segments are passed here because they also contain the attribute color!
     $('#sidebar').css("background", segment.col);
 
@@ -71,7 +70,7 @@ Attributes = {
       html.data('value', this);
       $('ul.attribute-values').append(html);
     });
-    
+
     $('ul.attribute-values li a').click(function() {
       p.addNode($(this).parent().data('value'));
     });
